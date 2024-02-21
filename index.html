@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ReactGirls: HTML a CSS akademie</title>
+	</head>
+	<body>
+		<h1>ReactGirls: HTML 1</h1>
+
+		<h2>Odstavce</h2>
+		<p>
+			Text webové stránky můžeme strukturovat do jednotlivých odstavců. Uvnitř odstavců (a obecně elementů) nezáleží na
+			zalamování řádků nebo počtu mezer mezi slovy.
+		</p>
+		<p>Pokud nutně potřebujeme zalomit text uvnitř odstavce,<br />můžeme to udělat elementem <code>br</code>.</p>
+
+		<h2>Formátování textu</h2>
+		<p>
+			Pokud potřebujeme část textu zdůraznit, použijeme element <code>em</code>.
+			<em>Tato věta je tedy důležitá.</em> Pokud chceme vyjádřit ještě vyšší stupeň zdůraznění, slouží k tomu element
+			<code>strong</code>. <strong>Toto upozornění je tedy ještě důležitější než to předchozí.</strong>
+		</p>
+
+		<h2>Seznamy</h2>
+		<p>Nákupní seznam:</p>
+		<ul>
+			<li>pečivo</li>
+			<li>sýr</li>
+			<li>salám</li>
+			<li>mléko</li>
+			<li>jablka</li>
+		</ul>
+		<p>Lední hokej na Zimních olympijských hrách 1998 – turnaj muži:</p>
+		<ol>
+			<li>Česká republika</li>
+			<li>Rusko</li>
+			<li>Finsko</li>
+			<li>Kanada</li>
+		</ol>
+		<p>Víceúrovňové seznamy:</p>
+		<ul>
+			<li>
+				Hogwarts
+				<ul>
+					<li>
+						Gryffindor
+						<ul>
+							<li>Harry Potter</li>
+							<li>Hermione Granger</li>
+							<li>Ron Weasley</li>
+						</ul>
+					</li>
+					<li>
+						Slytherin
+						<ul>
+							<li>Draco Malfoy</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				Durmstrang
+				<ul>
+					<li>Viktor Krum</li>
+				</ul>
+			</li>
+		</ul>
+		<ol>
+			<li>Úvod</li>
+			<li>
+				Obvyklá struktura řeckého dramatu
+				<ol>
+					<li>Expozice</li>
+					<li>Kolize</li>
+					<li>Krize</li>
+					<li>Peripetie</li>
+					<li>Katastrofa</li>
+				</ol>
+			</li>
+			<li>Historie dramatu</li>
+			<li>Závěr</li>
+		</ol>
+
+		<h2>Odkazy</h2>
+		<p>
+			Možnost odkazovat se z jedné stránky na jinou je jednou z nejzásadnějších myšlenek webu a rovněž i historicky
+			jedním z důvodů vzniku jeho popularity. Odkazy na jiné stránky na webu (ale též třeba na obrázky apod.) jsou
+			dvojího druhu:
+		</p>
+		<ul>
+			<li>
+				<em>Absolutní</em>, tedy takové, kde uvedeme celou adresu, kam se odkazujeme.
+				<a href="https://reactgirls.com/akademie">Zde můžete získat více informací o akademiích od ReactGirls.</a>
+			</li>
+			<li>
+				<em>Relativní</em>, tedy takové, kde uvedeme adresu relativní vůči umístění dokumentu, ve kterém se odkaz
+				nachází, například: <a href="povidani_o_pejskovi_a_kocicce/obsah.html">Povídání o pejskovi a kočičce</a>.
+			</li>
+		</ul>
+		<p>
+			Cílem odkazu nemusí ovšem nutně být jiná webová stránka. Například je možné vytvořit odkaz na e-mailovou adresu:
+			<a href="mailto:reactgirlsprague@gmail.com">kontaktujte nás</a>.
+		</p>
+
+		<h2>Obrázky</h2>
+		<p>
+			Elementu <code>img</code>, sloužícímu k vložení obrázku, povinně nastavujeme kromě atributu
+			<code>src</code> rovněž i atribut <code>alt</code>. Jeho obsah je použit především čtečkami asistujícími
+			uživatelům se zrakovým postižením, případně i běžnými prohlížeči například v situaci, kdy samotný obrázek není
+			dostupný.
+		</p>
+		<p>Logo ReactGirls: <img src="react-girls-logo-blue.png" alt="Logo ReactGirls" />.</p>
+	</body>
+</html>
