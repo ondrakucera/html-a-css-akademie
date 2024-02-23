@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
 		<title>ReactGirls: HTML a CSS akademie</title>
 	</head>
 	<body>
@@ -112,5 +113,133 @@
 			dostupný.
 		</p>
 		<p>Logo ReactGirls: <img src="react-girls-logo-blue.png" alt="Logo ReactGirls" />.</p>
+
+		<h1>ReactGirls: CSS 1</h1>
+
+		<h2>Identifikátory</h2>
+		<p>
+			Libovolnému elementu je možné přiřadit náš vlastní identifikátor, a to hodnotou atributu <code>id</code>. Přes
+			identifikátor je potom možné s elementem pohodlně pracovat v CSS (a JavaScriptu). Je ale nezbytné zajistit, aby
+			každý identifikátor byl unikátní napříč všemi elementy celého dokumentu. V praxi se identifikátory pro stylování
+			příliš nepoužívají, přednost se dává třídám (nám se ale v následujících ukázkách budou hodit).
+		</p>
+
+		<p>
+			Identifikátory mají ještě jedno použití, nesouvisející s CSS. Můžeme se totiž odkázat
+			<a href="#barvy">na konkrétní část stránky</a> začínající právě elementem s nějakým identifikátorem.
+		</p>
+
+		<h2 id="barvy">Barvy</h2>
+		<ul>
+			<li id="barvy-polozka-1"><code>blue</code></li>
+			<li id="barvy-polozka-2">
+				<code>#dc143c</code> (<code>crimson</code>, též možno zapsat jako <code>rgb(220, 20, 60)</code>)
+			</li>
+			<li id="barvy-polozka-3"><code>hsl(0, 100%, 50%)</code> (<code>red</code>)</li>
+		</ul>
+
+		<h2>Jednotky velikosti</h2>
+		<ul>
+			<li id="jednotky-polozka-1">Text velikosti <code>120%</code>.</li>
+			<li id="jednotky-polozka-2">Text velikosti <code>1.2rem</code>.</li>
+			<li id="jednotky-polozka-3">Text velikosti <code>32px</code>.</li>
+		</ul>
+
+		<h2>Vlastnosti fontů</h2>
+		<ul>
+			<li id="vlastnosti-fontu-polozka-1"><code>font-weight: bold</code></li>
+			<li id="vlastnosti-fontu-polozka-2"><code>font-style: italic</code></li>
+			<li id="vlastnosti-fontu-polozka-3"><code>font-weight: bold; font-style: italic</code></li>
+			<li id="vlastnosti-fontu-polozka-4"><code>font-family: "Tex Gyre Heros", sans-serif</code></li>
+			<li id="vlastnosti-fontu-polozka-5"><code>font-family: "Tex Gyre Schola", serif</code></li>
+			<li id="vlastnosti-fontu-polozka-6"><code>font-family: "Tex Gyre Cursor", monospace</code></li>
+		</ul>
+
+		<h2>Zarovnání textu</h2>
+		<p id="zarovnani-textu-1">
+			To bylo tenkrát, když pejsek a kočička ještě spolu hospodařili; měli u lesa svůj malý domeček a tam spolu bydleli
+			a chtěli všechno dělat tak, jak to dělají velcí lidé. Ale oni to vždycky tak neuměli, protože mají malé a
+			nešikovné tlapičky a na těch tlapičkách nemají prsty, jako má člověk, jenom takové malé polštářky a na nich
+			drápky. A tak nemohli dělat všechno tak, jak to dělají lidé, a do školy nechodili, protože škola není pro
+			zvířátka, ba ne, to ne! Co myslíte? Ta je jen pro děti!
+		</p>
+		<p id="zarovnani-textu-2">
+			To bylo tenkrát, když pejsek a kočička ještě spolu hospodařili; měli u lesa svůj malý domeček a tam spolu bydleli
+			a chtěli všechno dělat tak, jak to dělají velcí lidé. Ale oni to vždycky tak neuměli, protože mají malé a
+			nešikovné tlapičky a na těch tlapičkách nemají prsty, jako má člověk, jenom takové malé polštářky a na nich
+			drápky. A tak nemohli dělat všechno tak, jak to dělají lidé, a do školy nechodili, protože škola není pro
+			zvířátka, ba ne, to ne! Co myslíte? Ta je jen pro děti!
+		</p>
+		<p id="zarovnani-textu-3">
+			To bylo tenkrát, když pejsek a kočička ještě spolu hospodařili; měli u lesa svůj malý domeček a tam spolu bydleli
+			a chtěli všechno dělat tak, jak to dělají velcí lidé. Ale oni to vždycky tak neuměli, protože mají malé a
+			nešikovné tlapičky a na těch tlapičkách nemají prsty, jako má člověk, jenom takové malé polštářky a na nich
+			drápky. A tak nemohli dělat všechno tak, jak to dělají lidé, a do školy nechodili, protože škola není pro
+			zvířátka, ba ne, to ne! Co myslíte? Ta je jen pro děti!
+		</p>
+		<p id="zarovnani-textu-4">
+			To bylo tenkrát, když pejsek a kočička ještě spolu hospodařili; měli u lesa svůj malý domeček a tam spolu bydleli
+			a chtěli všechno dělat tak, jak to dělají velcí lidé. Ale oni to vždycky tak neuměli, protože mají malé a
+			nešikovné tlapičky a na těch tlapičkách nemají prsty, jako má člověk, jenom takové malé polštářky a na nich
+			drápky. A tak nemohli dělat všechno tak, jak to dělají lidé, a do školy nechodili, protože škola není pro
+			zvířátka, ba ne, to ne! Co myslíte? Ta je jen pro děti!
+		</p>
+
+		<h2>Elementy <code>div</code> a <code>span</code></h2>
+		<p>
+			V HTML existují dva elementy, které cíleně nemají přiřazenou vůbec žádnou konkrétní sémantiku. To se nejčastěji
+			hodí právě v kombinaci s CSS: chceme-li konkrétní část obsahu nějak specificky nastylovat, můžeme ji obalit jedním
+			z těchto elementů (obvykle ještě v kombinaci s použitím tříd).
+		</p>
+		<p>
+			Element <code>div</code> je tzv. blokový (block) element, a tedy vymezuje nějaký obdélník, uvnitř něhož se nachází
+			jeho obsah. Pro jednoduchost si jej můžeme představit jako něco jako odstavec, ovšem bez toho konkrétního významu,
+			že se jedná o odstavec textu. Hlavní rozdíl je v tom, že uvnitř odstavce nemá smysl mít jiný odstavec, zatímco
+			vnořování <code>div</code>ů je naopak velmi časté.
+		</p>
+		<p>
+			Element <code>span</code> je tzv. řádkový (inline) element, a tedy je součástí textového obsahu nějakého jiného
+			blokového elementu (např. odstavce). S jeho pomocí můžeme přiřadit specifický styl konkrétní části textu.
+		</p>
+
+		<h2>Třídy</h2>
+		<p>
+			Elementy můžeme kategorizovat do tzv. tříd, typicky podle nějaké vlastnosti (a to i napříč různými druhy
+			elementů). Můžeme například definovat třídu <em>dulezite</em>, v CSS této třídě definovat, jak chceme důležitost
+			reprezentovat, a pak tuto třídu přiřadit libovolnému elementu (např. celému nadpisu, celému odstavci, části
+			odstavce s využitím <code>span</code>u apod.).
+		</p>
+		<h3 class="dulezite">Důležitý nadpis třetí úrovně</h3>
+		<p class="dulezite">Odstavec plný důležitého textu.</p>
+		<p>Odstavec obsahující pouze jedno <span class="dulezite">důležité</span> slovo.</p>
+
+		<h2>Box model</h2>
+		<p id="box-model-1">
+			To bylo tenkrát, když pejsek a kočička ještě spolu hospodařili; měli u lesa svůj malý domeček a tam spolu bydleli
+			a chtěli všechno dělat tak, jak to dělají velcí lidé. Ale oni to vždycky tak neuměli, protože mají malé a
+			nešikovné tlapičky a na těch tlapičkách nemají prsty, jako má člověk, jenom takové malé polštářky a na nich
+			drápky. A tak nemohli dělat všechno tak, jak to dělají lidé, a do školy nechodili, protože škola není pro
+			zvířátka, ba ne, to ne! Co myslíte? Ta je jen pro děti!
+		</p>
+		<p id="box-model-2">
+			To bylo tenkrát, když pejsek a kočička ještě spolu hospodařili; měli u lesa svůj malý domeček a tam spolu bydleli
+			a chtěli všechno dělat tak, jak to dělají velcí lidé. Ale oni to vždycky tak neuměli, protože mají malé a
+			nešikovné tlapičky a na těch tlapičkách nemají prsty, jako má člověk, jenom takové malé polštářky a na nich
+			drápky. A tak nemohli dělat všechno tak, jak to dělají lidé, a do školy nechodili, protože škola není pro
+			zvířátka, ba ne, to ne! Co myslíte? Ta je jen pro děti!
+		</p>
+		<p id="box-model-3">
+			To bylo tenkrát, když pejsek a kočička ještě spolu hospodařili; měli u lesa svůj malý domeček a tam spolu bydleli
+			a chtěli všechno dělat tak, jak to dělají velcí lidé. Ale oni to vždycky tak neuměli, protože mají malé a
+			nešikovné tlapičky a na těch tlapičkách nemají prsty, jako má člověk, jenom takové malé polštářky a na nich
+			drápky. A tak nemohli dělat všechno tak, jak to dělají lidé, a do školy nechodili, protože škola není pro
+			zvířátka, ba ne, to ne! Co myslíte? Ta je jen pro děti!
+		</p>
+		<p>
+			Logo ReactGirls v různých velikostech:
+			<img id="box-model-logo-1" src="react-girls-logo-blue.png" alt="Logo ReactGirls" />
+			<img id="box-model-logo-2" src="react-girls-logo-blue.png" alt="Logo ReactGirls" />
+			<img id="box-model-logo-3" src="react-girls-logo-blue.png" alt="Logo ReactGirls" />.
+		</p>
 	</body>
 </html>
