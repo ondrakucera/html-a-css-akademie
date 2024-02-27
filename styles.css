@@ -150,3 +150,115 @@ fieldset {
 	width: 100%;
 	height: 8rem;
 }
+
+/* Lekce CSS 2 */
+
+/* Selektory */
+h1,
+h2 {
+	font-family: serif;
+}
+#selektory a {
+	text-decoration: none;
+}
+#selektory a:hover {
+	text-decoration: underline;
+}
+.ozdobne::first-line {
+	font-variant: small-caps;
+}
+
+/* Webové fonty */
+#webove-fonty {
+	font-family: Martel, serif;
+}
+
+/* Obtékání */
+#obtekani p {
+	width: 20rem;
+}
+#obtekani img {
+	width: 3rem;
+	float: left;
+	margin-right: 0.5rem;
+}
+
+/* Pozicování */
+#pozicovani p {
+	border: 3px ridge lightgray;
+	padding: 0.5rem;
+}
+#pozicovani-logo-1 {
+	width: 5rem;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
+#pozicovani-odstavec-2 {
+	width: 80%;
+	position: relative;
+	top: -1.5rem;
+	left: 3rem;
+}
+h2 {
+	position: sticky;
+	top: 0;
+}
+#pozicovani-obal {
+	position: relative;
+	height: 6rem;
+}
+#pozicovani-vnitrni-ctverec-1 {
+	width: 5rem;
+	height: 5rem;
+	background-color: navy;
+	position: absolute;
+	top: 0;
+	left: 1rem;
+	z-index: 2;
+}
+#pozicovani-vnitrni-ctverec-2 {
+	width: 5rem;
+	height: 5rem;
+	background-color: darkorange;
+	position: absolute;
+	top: 1rem;
+	left: 2rem;
+	z-index: 1;
+}
+
+/* Media queries */
+@media print {
+	body {
+		font-family: serif;
+		font-size: 12pt;
+	}
+}
+@media screen and (max-width: 50rem) {
+	h2 {
+		color: gray;
+		background-color: aqua;
+	}
+}
+
+/* Flexbox */
+#ovoce {
+	background-color: #008844;
+	border: 1px solid #008844;
+	padding: 0 1rem;
+	display: flex;
+	gap: 1rem;
+}
+#ovoce li {
+	list-style-type: none;
+	padding: 0.5rem 0.3rem;
+	background-color: white;
+	color: maroon;
+	font-weight: bold;
+}
+@media screen and (max-width: 50rem) {
+	#ovoce {
+		flex-direction: column;
+		padding: 1rem;
+	}
+}

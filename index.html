@@ -4,7 +4,17 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Přidáno pro lekci CSS 2 -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Martel:wght@200;300;400;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- ----------------------- -->
+		<!-- Přidáno pro lekci CSS 1 -->
 		<link rel="stylesheet" href="styles.css" />
+		<!-- ----------------------- -->
 		<title>ReactGirls: HTML a CSS akademie</title>
 	</head>
 	<body>
@@ -445,5 +455,238 @@
 				</table>
 			</fieldset>
 		</form>
+
+		<!-- Lekce CSS 2 -->
+
+		<h1>ReactGirls: CSS 2</h1>
+
+		<section id="selektory">
+			<h2>Selektory</h2>
+
+			<p>
+				Dosud jsme si představili pouze úplně nejzákladnější selektory, a to takové, které vybírají všechny konkrétní
+				elementy nebo všechny elementy spadající do nějaké třídy nebo element s daným identifikátorem. Možnosti
+				selektorů jsou ale pochopitelně mnohem širší. Například můžeme použít několik selektorů oddělených čárkou.
+			</p>
+
+			<pre>
+h1, h2 { /* Následující vlastnosti budou použity jak pro nadpisy první úrovně, tak pro nadpisy druhé úrovně. */
+	font-family: serif;
+}
+		</pre
+			>
+
+			<p>
+				Velmi užitečné jsou tzv. kombinované selektory. Například selektor <code>article a</code> odpovídá všem odkazům,
+				které jsou uvnitř nějakého článku (tedy odkazů, které jsou mimo článek, se netýká). Platí to i pro situace, kdy
+				uvnitř článku je například element <code>p</code>, uvnitř něj <code>strong</code> a teprve uvnitř něj až samotný
+				element <code>a</code>. Pokud bychom chtěli vyjádřit, že nás zajímají pouze takové odkazy, které jsou přímo
+				součástí elementu <code>article</code> (ale ne už právě takové odkazy, které jsou hlouběji zanořené), zapsali
+				bychom to selektorem <code>article &gt; a</code>.
+			</p>
+
+			<p>
+				Můžeme cílit na elementy, které mají nastaven nějaký atribut. Například selektor <code>p[id]</code> znamená
+				všechny odstavce, které mají nastaven identifikátor (bez ohledu na jeho hodnotu, prostě nějaký mají). Můžeme
+				dokonce vybírat elementy, které mají v určitém atributu určitou hodnotu. Zápisem
+				<code>input[name="oblibene-ovoce"]</code> vybereme všechny elementy <code>input</code>, jejichž atribut
+				<code>name</code> má hodnotu <code>oblibene-ovoce</code>.
+			</p>
+
+			<p>
+				Vše předchozí (i později) zmíněné lze nejrůznějšími způsoby kombinovat, takže selektor
+				<code>p.uvod a[title]</code> vybírá takové odkazy, které mají uveden atribut <code>title</code> a které se
+				nacházejí v odstavcích patřících do třídy <code>uvode</code>.
+			</p>
+
+			<p>
+				Kromě tříd zavádí CSS rovněž pojem tzv. pseudotříd. Zápisem <code>a:hover</code> vybereme takový odkaz, nad
+				který uživatel zrovna umístil kurzor myši. Jinými slovy můžeme snadno třeba
+				<a href="https://reactgirls.com/">odkazu na web ReactGirls</a> změnit styl, když nad něj uživatel najede myší (a
+				naopak mu vrátit styl původní, když zase myší odjede pryč). Jinými příkladem pseudotřídy může být například
+				<code>input:focus</code> vybírající to formulářové políčko, které zrovna má tzv. focus, tedy je aktivováno a
+				uživatel do něj může zadat svůj vstup.
+			</p>
+
+			<p class="ozdobne">
+				Podobně jako existují pseudotřídy, existují i tzv. pseudoelementy. Za všechny uveďme jediný příklad: zápisem
+				<code>p::first-line</code> vybereme první řádek všech odstavců (jehož stylování následně můžeme ozvláštnit).
+			</p>
+		</section>
+
+		<section id="kaskada">
+			<h2>Kaskáda</h2>
+
+			<p>
+				Kaskáda vyjadřuje základní důležitost jednotlivých pravidel dle jejich původu. Mírně zjednodušené pořadí od
+				nejdůležitějších je následující:
+			</p>
+
+			<ol>
+				<li>Důležité (ve smyslu <code>!important</code>) deklarace definované prohlížečem.</li>
+				<li>Důležité deklarace definované uživatelem.</li>
+				<li>Důležité deklarace definované autorem webové stránky.</li>
+				<li>Normální deklarace definované autorem webové stránky.</li>
+				<li>Normální deklarace definované uživatelem.</li>
+				<li>Normální deklarace definované prohlížečem.</li>
+			</ol>
+		</section>
+
+		<section id="specificita">
+			<h2>Specificita selektorů</h2>
+
+			<p>
+				Jak prohlížeč postupuje ve chvíli, kdy pro stejný element CSS nabádá nastavit určitou vlastnost na základě
+				různých selektorů? Co když například řekneme, že všechny odstavce mají mít zelené písmo, všechny elementy se
+				třídou <code>pozor</code> mají mít červené písmo, a v textu budeme mít odstavec se třídou <code>pozor</code>?
+				Odpovědí je tzv. specificita jednotlivých selektorů. Vyjadřuje se jako trojciferné číslo, jehož cifry se
+				počítají následujícím způsobem.
+			</p>
+
+			<ul>
+				<li>Nejlevější cifra je počet identifikátorů v selektoru použitých.</li>
+				<li>Prostřední cifra je počet selektorů používajících třídy, atributy a pseudotřídy.</li>
+				<li>Nejpravější cifra je počet selektorů používajících elementy a pseudoelementy.</li>
+			</ul>
+
+			<p>
+				Například selektor <code>em</code> tedy má specificitu 001, selektor <code>p em</code> má specificitu 002,
+				selektor <code>.pozor</code> má specificitu 010, selektor <code>p.pozor</code> má specificitu 011 a selektor
+				<code>#specificita</code> má specificitu 100.
+			</p>
+
+			<p>
+				Hodnoty vlastností se poté aplikují od nejvyšší specificity selektorů pravidel, v rámci kterých se vyskytují. V
+				případě shody (pokud bychom například, nejspíš omylem, měli v CSS dvě sady pravidel pro všechny odstavce a v
+				obou sadách třeba nastavovali barvu textu) zvítězí hodnota vlastnosti nastavená <em>později</em>.
+			</p>
+		</section>
+
+		<section id="webove-fonty">
+			<h2>Webové fonty</h2>
+
+			<p>
+				Webové stránky mohou poskytnout svoje vlastní písma, kterými si přejí, aby byly zobrazeny. Tuto situaci
+				demonstruje následující ukázka.
+			</p>
+
+			<pre>
+@font-face {
+	font-family: Gentium; /* Definujeme písmo s názvem Gentium */
+	src: url(http://example.com/fonts/Gentium.woff); /* Určujeme adresu, na které se písmo nachází. */
+}
+p {
+	font-family: Gentium, serif; /* Písmo použijeme. */
+}
+			</pre
+			>
+
+			<p>Pro zjednodušení je možné použít i služby jako třeba <a href="https://fonts.google.com/">Google Fonts</a>.</p>
+		</section>
+
+		<section id="obtekani">
+			<h2>Obtékání</h2>
+
+			<p>
+				<img src="react-girls-logo-blue.png" alt="Logo ReactGirls" /> Pomocí vlastnosti <code>float</code> (a jejích
+				hodnot <code>left</code> nebo <code>right</code>) můžeme nechat nějaký element obtékat obsahem jiného. Například
+				tak můžeme nechat obrázek obtékat okolním textem.
+			</p>
+
+			<p>
+				Pokud je textu dostatek, bude pokračovat pod obtékaným obrázkem. Je ovšem potřeba pamatovat na to, že v opačném
+				případě bude obrázek obtékat i třeba text následujícího odstavce (nebo odstavců), což nemusí být vždy žádoucí. V
+				případě, že není, může nám pomoct vlastnost <code>clear</code>.
+			</p>
+		</section>
+
+		<section id="pozicovani">
+			<h2>Pozicování</h2>
+
+			<p>
+				Vlastností <code>position</code> můžeme elementu určit pozici odlišnou od té, na které byl vykreslen za
+				normálních okolností. Hodnota <code>absolute</code> tak například element umístí na konkrétní, absolutní
+				souřadnice vůči celé stránce. Tyto souřadnice určíme některými z vlastností <code>top</code>,
+				<code>right</code>, <code>bottom</code> nebo <code>left</code>.
+				<img src="react-girls-logo-blue.png" alt="Logo ReactGirls" id="pozicovani-logo-1" />
+			</p>
+
+			<p id="pozicovani-odstavec-2">
+				Hodnota <code>relative</code> způsobí posunutí elementu relativně vůči pozici, na které by byl vykreslen
+				původně.
+			</p>
+
+			<p>
+				Hodnota <code>fixed</code> má podobný efekt jako hodnota <code>absolute</code>, ovšem s tím rozdílem, že element
+				zůstává na daném místě obrazovky i při posunování stránky uživatelem. Hodnota <code>sticky</code> se chová
+				obdobně jako <code>relative</code>, ovšem s tím rozdílem, že pokud uživatel posouvá stránkou tak, že by element
+				přestal být viditelný, je jeho pozice zachována tak, aby zůstal být vidět.
+			</p>
+
+			<p>
+				Pokud je absolutně pozicovaný element uvnitř jiného elementu, který je rovněž například absolutně nebo relativně
+				pozicován, jeho souřadnice jsou uvažovány absolutně nikoliv vůči celé stránce, ale právě vůči onomu jinému
+				elementu.
+			</p>
+
+			<p>
+				Pro určení toho, jakým způsobem se vizuálně překrývají elementy s určeným pozicováním, slouží vlastnost
+				<code>z-index</code>.
+			</p>
+
+			<div id="pozicovani-obal">
+				<div id="pozicovani-vnitrni-ctverec-1"></div>
+				<div id="pozicovani-vnitrni-ctverec-2"></div>
+			</div>
+		</section>
+
+		<section id="media-queries">
+			<h2>Media queries</h2>
+
+			<p>
+				Pomocí tzv. media queries můžeme vytvořit různé styly pro různé druhy zobrazovacích zařízení. Například tak
+				můžeme určit speciální vzhled pro tisk jako v následující ukázce.
+			</p>
+
+			<pre>
+@media print { /* Obsažené styly jsou použity při tisku. */
+	body {
+		font-family: serif;
+		font-size: 12pt;
+	}
+}
+			</pre
+			>
+
+			<p>
+				Kromě druhu zobrazovacího zařízení můžeme klást i dodatečné podmínky. Například
+				<code>@media screen and (max-width: 50rem)</code> bude znamenat styly pro zařízení s obrazovkou, jejíž šířka je
+				ale maximálně 50 rem (tedy pro zařízení s větší obrazovkou nebudou tyto styly aplikovány).
+			</p>
+		</section>
+
+		<section id="flexbox">
+			<h2>Flexbox</h2>
+
+			<ul id="ovoce">
+				<li>Jablko</li>
+				<li>Banán</li>
+				<li>Hruška</li>
+				<li>Hroznové víno</li>
+				<li>Durian</li>
+			</ul>
+
+			<p><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Complete Guide to Flexbox</a></p>
+
+			<p><a href="galerie/galerie-flexbox.html">Jednoduchá galerie</a></p>
+		</section>
+
+		<section id="grid">
+			<h2>Grid</h2>
+
+			<p><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">A Complete Guide to CSS Grid</a></p>
+
+			<p><a href="galerie/galerie-grid.html">Jednoduchá galerie</a></p>
+		</section>
 	</body>
 </html>
