@@ -1,0 +1,6 @@
+/* Tento soubor obsahuje styly pro jednotlivé články */
+
+.article-illustration {
+	float: left;
+	margin-right: 1rem;
+}
