@@ -1,0 +1,84 @@
+/* Tento soubor obsahuje styly pro úvodní stránku */
+
+/* Rozložení main a aside */
+.content {
+	display: grid;
+	grid-template-columns: 1fr 20rem;
+}
+
+/* Odkazy */
+a {
+	color: mediumblue;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+/* Hlavní obsah */
+main h1 {
+	color: navy;
+}
+main article {
+	display: flex;
+	border-bottom: 1px solid lightgray;
+}
+main .article-image-container {
+	padding-top: 0.5rem;
+	padding-left: 0.5rem;
+}
+main .article-image-container img {
+	width: 200px;
+	border-radius: 20px;
+}
+main .article-text-container {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+main article h2 {
+	margin: 0.5em 0;
+}
+main article p {
+	margin-top: 0;
+}
+
+/* Boční obsah */
+aside {
+	margin-top: 2em;
+	border-left: 1px solid lightgray;
+	padding-left: 1rem;
+}
+aside img {
+	width: 150px;
+}
+aside h2 {
+	text-align: center;
+	color: navy;
+}
+aside h3 {
+	margin-top: 0;
+	margin-bottom: 2rem;
+}
+
+/* Užší obrazovka */
+@media screen and (max-width: 50rem) {
+	.content {
+		display: block;
+	}
+	main article {
+		display: block;
+	}
+	aside {
+		border-left: none;
+	}
+}
+
+/* Tisk */
+@media print {
+	.content {
+		display: block;
+	}
+	aside {
+		border-left: none;
+	}
+}

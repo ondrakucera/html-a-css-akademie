@@ -1,0 +1,38 @@
+/* --- Nastavení box-sizing bez bližšího komentáře --- */
+html {
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+/* --------------------------------------------------- */
+
+h1 {
+	text-align: center;
+}
+
+.galerie {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	max-width: 80rem;
+	margin: 0 auto;
+}
+
+.galerie img {
+	flex: 0 1 19%;
+	width: 100%;
+	height: 100%;
+	margin: 0.5%;
+}
+
+@media screen and (max-width: 40rem) {
+	.galerie {
+		margin: 0 3rem;
+	}
+	.galerie img {
+		flex: 0 1 49%;
+	}
+}
