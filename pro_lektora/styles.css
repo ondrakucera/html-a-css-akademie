@@ -1,0 +1,264 @@
+/* --- Nastavení box-sizing bez bližšího komentáře --- */
+html {
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+/* --------------------------------------------------- */
+
+/* Lekce CSS 1 */
+
+/* Barvy */
+h2 {
+	color: aqua;
+	background-color: gray;
+}
+
+/* Velikost písma */
+h1 {
+	font-size: 300%;
+}
+h2 {
+	font-size: 200%;
+}
+
+/* Barvy */
+#barvy-polozka-1 {
+	color: blue;
+}
+#barvy-polozka-2 {
+	color: #dc143c;
+}
+#barvy-polozka-3 {
+	color: hsl(0, 100%, 50%);
+}
+
+/* Jednotky */
+#jednotky-polozka-1 {
+	font-size: 120%;
+}
+#jednotky-polozka-2 {
+	font-size: 1.2rem;
+}
+#jednotky-polozka-3 {
+	font-size: 32px;
+}
+
+/* Vlastnosti fontů */
+#vlastnosti-fontu-polozka-1 {
+	font-weight: bold;
+}
+#vlastnosti-fontu-polozka-2 {
+	font-style: italic;
+}
+#vlastnosti-fontu-polozka-3 {
+	font-weight: bold;
+	font-style: italic;
+}
+#vlastnosti-fontu-polozka-4 code {
+	font-family: "Tex Gyre Heros", sans-serif;
+}
+#vlastnosti-fontu-polozka-5 code {
+	font-family: "Tex Gyre Schola", serif;
+}
+#vlastnosti-fontu-polozka-6 code {
+	font-family: "Tex Gyre Cursor", monospace;
+}
+
+/* Zarovnání textu */
+#zarovnani-textu-1,
+#zarovnani-textu-2,
+#zarovnani-textu-3,
+#zarovnani-textu-4 {
+	width: 50%;
+}
+#zarovnani-textu-1 {
+	text-align: left;
+}
+#zarovnani-textu-2 {
+	text-align: right;
+}
+#zarovnani-textu-3 {
+	text-align: center;
+}
+#zarovnani-textu-4 {
+	text-align: justify;
+}
+
+/* Třídy */
+.dulezite {
+	font-weight: bold;
+	color: maroon;
+}
+
+/* Box model */
+#box-model-1 {
+	margin: 3rem 10rem 2rem 1rem;
+	border: 2px solid lime;
+	padding: 1rem;
+}
+#box-model-2 {
+	width: 50%;
+	margin-left: 4rem;
+	border: 3px dashed red;
+	padding: 2rem;
+}
+#box-model-3 {
+	width: 75%;
+	margin: 3rem auto;
+	border: 8px ridge lightgray;
+	padding: 0.5rem;
+}
+#box-model-logo-1 {
+	width: 100px;
+}
+#box-model-logo-2 {
+	height: 100px;
+}
+#box-model-logo-3 {
+	width: 200px;
+	height: 100px;
+}
+
+/* Lekce HTML 2 */
+
+/* Tabulky */
+table {
+	border: 2px solid black;
+}
+th {
+	border: 1px solid black;
+	padding: 0.5rem;
+}
+td {
+	border: 1px solid black;
+	padding: 0.5rem;
+}
+
+/* Formuláře */
+fieldset {
+	width: 50%;
+}
+#form-table {
+	width: 100%;
+	border: none;
+}
+#poznamky {
+	width: 100%;
+	height: 8rem;
+}
+
+/* Lekce CSS 2 */
+
+/* Selektory */
+h1,
+h2 {
+	font-family: serif;
+}
+#selektory a {
+	text-decoration: none;
+}
+#selektory a:hover {
+	text-decoration: underline;
+}
+.ozdobne::first-line {
+	font-variant: small-caps;
+}
+
+/* Webové fonty */
+#webove-fonty {
+	font-family: Martel, serif;
+}
+
+/* Obtékání */
+#obtekani p {
+	width: 20rem;
+}
+#obtekani img {
+	width: 3rem;
+	float: left;
+	margin-right: 0.5rem;
+}
+
+/* Pozicování */
+#pozicovani p {
+	border: 3px ridge lightgray;
+	padding: 0.5rem;
+}
+#pozicovani-logo-1 {
+	width: 5rem;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
+#pozicovani-odstavec-2 {
+	width: 80%;
+	position: relative;
+	top: -1.5rem;
+	left: 3rem;
+}
+h2 {
+	position: sticky;
+	top: 0;
+}
+#pozicovani-obal {
+	position: relative;
+	height: 6rem;
+}
+#pozicovani-vnitrni-ctverec-1 {
+	width: 5rem;
+	height: 5rem;
+	background-color: navy;
+	position: absolute;
+	top: 0;
+	left: 1rem;
+	z-index: 2;
+}
+#pozicovani-vnitrni-ctverec-2 {
+	width: 5rem;
+	height: 5rem;
+	background-color: darkorange;
+	position: absolute;
+	top: 1rem;
+	left: 2rem;
+	z-index: 1;
+}
+
+/* Media queries */
+@media print {
+	body {
+		font-family: serif;
+		font-size: 12pt;
+	}
+}
+@media screen and (max-width: 50rem) {
+	h2 {
+		color: gray;
+		background-color: aqua;
+	}
+}
+
+/* Flexbox */
+#ovoce {
+	background-color: #008844;
+	border: 1px solid #008844;
+	padding: 0 1rem;
+	display: flex;
+	gap: 1rem;
+}
+#ovoce li {
+	list-style-type: none;
+	padding: 0.5rem 0.3rem;
+	background-color: white;
+	color: maroon;
+	font-weight: bold;
+}
+@media screen and (max-width: 50rem) {
+	#ovoce {
+		flex-direction: column;
+		padding: 1rem;
+	}
+}

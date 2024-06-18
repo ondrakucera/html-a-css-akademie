@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Přidáno pro lekci CSS 2 -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Martel:wght@200;300;400;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- ----------------------- -->
+		<!-- Přidáno pro lekci CSS 1 -->
+		<link rel="stylesheet" href="styles.css" />
+		<!-- ----------------------- -->
+		<title>ReactGirls: HTML a CSS akademie</title>
+	</head>
+	<body>
+		<!-- Lekce HTML 1 -->
+
+		<h1>ReactGirls: HTML 1</h1>
+
+		<h2>Odstavce</h2>
+		<p>
+			Text webové stránky můžeme strukturovat do jednotlivých odstavců. Uvnitř odstavců (a obecně elementů) nezáleží na
+			zalamování řádků nebo počtu mezer mezi slovy.
+		</p>
+		<p>Pokud nutně potřebujeme zalomit text uvnitř odstavce,<br />můžeme to udělat elementem <code>br</code>.</p>
+
+		<h2>Formátování textu</h2>
+		<p>
+			Pokud potřebujeme část textu zdůraznit, použijeme element <code>em</code>.
+			<em>Tato věta je tedy důležitá.</em> Pokud chceme vyjádřit ještě vyšší stupeň zdůraznění, slouží k tomu element
+			<code>strong</code>. <strong>Toto upozornění je tedy ještě důležitější než to předchozí.</strong>
+		</p>
+
+		<h2>Seznamy</h2>
+		<p>Nákupní seznam:</p>
+		<ul>
+			<li>pečivo</li>
+			<li>sýr</li>
+			<li>salám</li>
+			<li>mléko</li>
+			<li>jablka</li>
+		</ul>
+		<p>Lední hokej na Zimních olympijských hrách 1998 – turnaj muži:</p>
+		<ol>
+			<li>Česká republika</li>
+			<li>Rusko</li>
+			<li>Finsko</li>
+			<li>Kanada</li>
+		</ol>
+		<p>Víceúrovňové seznamy:</p>
+		<ul>
+			<li>
+				Hogwarts
+				<ul>
+					<li>
+						Gryffindor
+						<ul>
+							<li>Harry Potter</li>
+							<li>Hermione Granger</li>
+							<li>Ron Weasley</li>
+						</ul>
+					</li>
+					<li>
+						Slytherin
+						<ul>
+							<li>Draco Malfoy</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				Durmstrang
+				<ul>
+					<li>Viktor Krum</li>
+				</ul>
+			</li>
+		</ul>
+		<ol>
+			<li>Úvod</li>
+			<li>
+				Obvyklá struktura řeckého dramatu
+				<ol>
+					<li>Expozice</li>
+					<li>Kolize</li>
+					<li>Krize</li>
+					<li>Peripetie</li>
+					<li>Katastrofa</li>
+				</ol>
+			</li>
+			<li>Historie dramatu</li>
+			<li>Závěr</li>
+		</ol>
+
+		<h2>Odkazy</h2>
+		<p>
+			Možnost odkazovat se z jedné stránky na jinou je jednou z nejzásadnějších myšlenek webu a rovněž i historicky
+			jedním z důvodů vzniku jeho popularity. Odkazy na jiné stránky na webu (ale též třeba na obrázky apod.) jsou
+			dvojího druhu:
+		</p>
+		<ul>
+			<li>
+				<em>Absolutní</em>, tedy takové, kde uvedeme celou adresu, kam se odkazujeme.
+				<a href="https://reactgirls.com/akademie">Zde můžete získat více informací o akademiích od ReactGirls.</a>
+			</li>
+			<li>
+				<em>Relativní</em>, tedy takové, kde uvedeme adresu relativní vůči umístění dokumentu, ve kterém se odkaz
+				nachází, například: <a href="povidani_o_pejskovi_a_kocicce/obsah.html">Povídání o pejskovi a kočičce</a>.
+			</li>
+		</ul>
+		<p>
+			Cílem odkazu nemusí ovšem nutně být jiná webová stránka. Například je možné vytvořit odkaz na e-mailovou adresu:
+			<a href="mailto:reactgirlsprague@gmail.com">kontaktujte nás</a>.
+		</p>
+
+		<h2>Obrázky</h2>
+		<p>
+			Elementu <code>img</code>, sloužícímu k vložení obrázku, povinně nastavujeme kromě atributu
+			<code>src</code> rovněž i atribut <code>alt</code>. Jeho obsah je použit především čtečkami asistujícími
+			uživatelům se zrakovým postižením, případně i běžnými prohlížeči například v situaci, kdy samotný obrázek není
+			dostupný.
+		</p>
+		<p>Logo ReactGirls: <img src="react-girls-logo-blue.png" alt="Logo ReactGirls" />.</p>
+
+		<!-- Lekce CSS 1 -->
+
+		<h1>ReactGirls: CSS 1</h1>
+
+		<h2>Identifikátory</h2>
+		<p>
+			Libovolnému elementu je možné přiřadit náš vlastní identifikátor, a to hodnotou atributu <code>id</code>. Přes
+			identifikátor je potom možné s elementem pohodlně pracovat v CSS (a JavaScriptu). Je ale nezbytné zajistit, aby
+			každý identifikátor byl unikátní napříč všemi elementy celého dokumentu. V praxi se identifikátory pro stylování
+			příliš nepoužívají, přednost se dává třídám (nám se ale v následujících ukázkách budou hodit).
+		</p>
+
+		<p>
+			Identifikátory mají ještě jedno použití, nesouvisející s CSS. Můžeme se totiž odkázat
+			<a href="#barvy">na konkrétní část stránky</a> začínající právě elementem s nějakým identifikátorem.
+		</p>
+
+		<h2 id="barvy">Barvy</h2>
+		<ul>
+			<li id="barvy-polozka-1"><code>blue</code></li>
+			<li id="barvy-polozka-2">
+				<code>#dc143c</code> (<code>crimson</code>, též možno zapsat jako <code>rgb(220, 20, 60)</code>)
+			</li>
+			<li id="barvy-polozka-3"><code>hsl(0, 100%, 50%)</code> (<code>red</code>)</li>
+		</ul>
+
+		<h2>Jednotky velikosti</h2>
+		<ul>
+			<li id="jednotky-polozka-1">Text velikosti <code>120%</code>.</li>
+			<li id="jednotky-polozka-2">Text velikosti <code>1.2rem</code>.</li>
+			<li id="jednotky-polozka-3">Text velikosti <code>32px</code>.</li>
+		</ul>
+
+		<h2>Vlastnosti fontů</h2>
+		<ul>
+			<li id="vlastnosti-fontu-polozka-1"><code>font-weight: bold</code></li>
+			<li id="vlastnosti-fontu-polozka-2"><code>font-style: italic</code></li>
+			<li id="vlastnosti-fontu-polozka-3"><code>font-weight: bold; font-style: italic</code></li>
+			<li id="vlastnosti-fontu-polozka-4"><code>font-family: "Tex Gyre Heros", sans-serif</code></li>
+			<li id="vlastnosti-fontu-polozka-5"><code>font-family: "Tex Gyre Schola", serif</code></li>
+			<li id="vlastnosti-fontu-polozka-6"><code>font-family: "Tex Gyre Cursor", monospace</code></li>
+		</ul>
+
+		<h2>Zarovnání textu</h2>
+		<p id="zarovnani-textu-1">
+			To bylo tenkrát, když pejsek a kočička ještě spolu hospodařili; měli u lesa svůj malý domeček a tam spolu bydleli
+			a chtěli všechno dělat tak, jak to dělají velcí lidé. Ale oni to vždycky tak neuměli, protože mají malé a
+			nešikovné tlapičky a na těch tlapičkách nemají prsty, jako má člověk, jenom takové malé polštářky a na nich
+			drápky. A tak nemohli dělat všechno tak, jak to dělají lidé, a do školy nechodili, protože škola není pro
+			zvířátka, ba ne, to ne! Co myslíte? Ta je jen pro děti!
+		</p>
+		<p id="zarovnani-textu-2">
+			To bylo tenkrát, když pejsek a kočička ještě spolu hospodařili; měli u lesa svůj malý domeček a tam spolu bydleli
+			a chtěli všechno dělat tak, jak to dělají velcí lidé. Ale oni to vždycky tak neuměli, protože mají malé a
+			nešikovné tlapičky a na těch tlapičkách nemají prsty, jako má člověk, jenom takové malé polštářky a na nich
+			drápky. A tak nemohli dělat všechno tak, jak to dělají lidé, a do školy nechodili, protože škola není pro
+			zvířátka, ba ne, to ne! Co myslíte? Ta je jen pro děti!
+		</p>
+		<p id="zarovnani-textu-3">
+			To bylo tenkrát, když pejsek a kočička ještě spolu hospodařili; měli u lesa svůj malý domeček a tam spolu bydleli
+			a chtěli všechno dělat tak, jak to dělají velcí lidé. Ale oni to vždycky tak neuměli, protože mají malé a
+			nešikovné tlapičky a na těch tlapičkách nemají prsty, jako má člověk, jenom takové malé polštářky a na nich
+			drápky. A tak nemohli dělat všechno tak, jak to dělají lidé, a do školy nechodili, protože škola není pro
+			zvířátka, ba ne, to ne! Co myslíte? Ta je jen pro děti!
+		</p>
+		<p id="zarovnani-textu-4">
+			To bylo tenkrát, když pejsek a kočička ještě spolu hospodařili; měli u lesa svůj malý domeček a tam spolu bydleli
+			a chtěli všechno dělat tak, jak to dělají velcí lidé. Ale oni to vždycky tak neuměli, protože mají malé a
+			nešikovné tlapičky a na těch tlapičkách nemají prsty, jako má člověk, jenom takové malé polštářky a na nich
+			drápky. A tak nemohli dělat všechno tak, jak to dělají lidé, a do školy nechodili, protože škola není pro
+			zvířátka, ba ne, to ne! Co myslíte? Ta je jen pro děti!
+		</p>
+
+		<h2>Elementy <code>div</code> a <code>span</code></h2>
+		<p>
+			V HTML existují dva elementy, které cíleně nemají přiřazenou vůbec žádnou konkrétní sémantiku. To se nejčastěji
+			hodí právě v kombinaci s CSS: chceme-li konkrétní část obsahu nějak specificky nastylovat, můžeme ji obalit jedním
+			z těchto elementů (obvykle ještě v kombinaci s použitím tříd).
+		</p>
+		<p>
+			Element <code>div</code> je tzv. blokový (block) element, a tedy vymezuje nějaký obdélník, uvnitř něhož se nachází
+			jeho obsah. Pro jednoduchost si jej můžeme představit jako něco jako odstavec, ovšem bez toho konkrétního významu,
+			že se jedná o odstavec textu. Hlavní rozdíl je v tom, že uvnitř odstavce nemá smysl mít jiný odstavec, zatímco
+			vnořování <code>div</code>ů je naopak velmi časté.
+		</p>
+		<p>
+			Element <code>span</code> je tzv. řádkový (inline) element, a tedy je součástí textového obsahu nějakého jiného
+			blokového elementu (např. odstavce). S jeho pomocí můžeme přiřadit specifický styl konkrétní části textu.
+		</p>
+
+		<h2>Třídy</h2>
+		<p>
+			Elementy můžeme kategorizovat do tzv. tříd, typicky podle nějaké vlastnosti (a to i napříč různými druhy
+			elementů). Můžeme například definovat třídu <em>dulezite</em>, v CSS této třídě definovat, jak chceme důležitost
+			reprezentovat, a pak tuto třídu přiřadit libovolnému elementu (např. celému nadpisu, celému odstavci, části
+			odstavce s využitím <code>span</code>u apod.).
+		</p>
+		<h3 class="dulezite">Důležitý nadpis třetí úrovně</h3>
+		<p class="dulezite">Odstavec plný důležitého textu.</p>
+		<p>Odstavec obsahující pouze jedno <span class="dulezite">důležité</span> slovo.</p>
+
+		<h2>Box model</h2>
+		<p id="box-model-1">
+			To bylo tenkrát, když pejsek a kočička ještě spolu hospodařili; měli u lesa svůj malý domeček a tam spolu bydleli
+			a chtěli všechno dělat tak, jak to dělají velcí lidé. Ale oni to vždycky tak neuměli, protože mají malé a
+			nešikovné tlapičky a na těch tlapičkách nemají prsty, jako má člověk, jenom takové malé polštářky a na nich
+			drápky. A tak nemohli dělat všechno tak, jak to dělají lidé, a do školy nechodili, protože škola není pro
+			zvířátka, ba ne, to ne! Co myslíte? Ta je jen pro děti!
+		</p>
+		<p id="box-model-2">
+			To bylo tenkrát, když pejsek a kočička ještě spolu hospodařili; měli u lesa svůj malý domeček a tam spolu bydleli
+			a chtěli všechno dělat tak, jak to dělají velcí lidé. Ale oni to vždycky tak neuměli, protože mají malé a
+			nešikovné tlapičky a na těch tlapičkách nemají prsty, jako má člověk, jenom takové malé polštářky a na nich
+			drápky. A tak nemohli dělat všechno tak, jak to dělají lidé, a do školy nechodili, protože škola není pro
+			zvířátka, ba ne, to ne! Co myslíte? Ta je jen pro děti!
+		</p>
+		<p id="box-model-3">
+			To bylo tenkrát, když pejsek a kočička ještě spolu hospodařili; měli u lesa svůj malý domeček a tam spolu bydleli
+			a chtěli všechno dělat tak, jak to dělají velcí lidé. Ale oni to vždycky tak neuměli, protože mají malé a
+			nešikovné tlapičky a na těch tlapičkách nemají prsty, jako má člověk, jenom takové malé polštářky a na nich
+			drápky. A tak nemohli dělat všechno tak, jak to dělají lidé, a do školy nechodili, protože škola není pro
+			zvířátka, ba ne, to ne! Co myslíte? Ta je jen pro děti!
+		</p>
+		<p>
+			Logo ReactGirls v různých velikostech:
+			<img id="box-model-logo-1" src="react-girls-logo-blue.png" alt="Logo ReactGirls" />
+			<img id="box-model-logo-2" src="react-girls-logo-blue.png" alt="Logo ReactGirls" />
+			<img id="box-model-logo-3" src="react-girls-logo-blue.png" alt="Logo ReactGirls" />.
+		</p>
+
+		<!-- Lekce HTML 2 -->
+
+		<h1>ReactGirls: HTML 2</h1>
+
+		<h2>Struktura stránky</h2>
+		<p>Mnoho stránek je složeno ze struktury, která by se dala zjednodušeně zachytit následujícím obrázkem.</p>
+		<p><img src="page-structure.png" /></p>
+		<p>
+			Tu bychom mohli s dosavadními znalostmi HTML zachytit přibližně následovně (přestože ještě nemáme znalost
+			stylování pro dosažení odpovídajícího zobrazení).
+		</p>
+		<pre>
+&lt;div class="header"&gt;
+	…
+	&lt;div class="navigation"&gt;
+		…
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="main-content"&gt;
+	&lt;div class="article"&gt;
+		&lt;h2&gt;Článek 1&lt;/h2&gt;
+		&lt;p&gt;Text prvního článku.&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;div class="article"&gt;
+		&lt;h2&gt;Článek 2&lt;/h2&gt;
+		&lt;p&gt;Text druhého článku.&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="side-content"&gt;
+	…
+&lt;/div&gt;
+&lt;div class="footer"&gt;
+	…
+&lt;/div&gt;
+		</pre
+		>
+		<p>
+			HTML nám v tomto směru ale nabízí elementy s konkrétním významem odpovídajícím právě takovýmto potřebám:
+			<code>main</code>, <code>article</code>, <code>section</code>, <code>header</code>, <code>footer</code>,
+			<code>nav</code> nebo <code>aside</code>. S jejich použitím bychom totéž mohli zachytit například následovně.
+		</p>
+		<pre>
+&lt;header&gt;
+	…
+	&lt;nav&gt;
+		…
+	&lt;/nav&gt;
+&lt;/header&gt;
+&lt;main&gt;
+	&lt;article&gt;
+		&lt;h2&gt;Článek 1&lt;/h2&gt;
+		&lt;p&gt;Text prvního článku.&lt;/p&gt;
+	&lt;/article&gt;
+	&lt;article&gt;
+		&lt;h2&gt;Článek 2&lt;/h2&gt;
+		&lt;p&gt;Text druhého článku.&lt;/p&gt;
+	&lt;/article&gt;
+&lt;/main&gt;
+&lt;aside&gt;
+	…
+&lt;/aside&gt;
+&lt;footer&gt;
+	…
+&lt;/footer&gt;
+		</pre
+		>
+
+		<h2>Tabulky</h2>
+		<table>
+			<caption>
+				Hráči NHL s nejvíce body
+			</caption>
+			<thead>
+				<tr>
+					<th>Hráč</th>
+					<th>Body</th>
+					<th>Góly</th>
+					<th>Asistence</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Wayne Gretzky</td>
+					<td>2857</td>
+					<td>894</td>
+					<td>1963</td>
+				</tr>
+				<tr>
+					<td>Jaromír Jágr</td>
+					<td>1921</td>
+					<td>766</td>
+					<td>1155</td>
+				</tr>
+				<tr>
+					<td>Mark Messier</td>
+					<td>1887</td>
+					<td>694</td>
+					<td>1193</td>
+				</tr>
+				<tr>
+					<td colspan="4">…</td>
+				</tr>
+				<tr>
+					<td>Sidney Crosby</td>
+					<td>1502</td>
+					<td>550</td>
+					<td>952</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2>Formuláře</h2>
+		<p>
+			Formuláře jsou tvořeny elementem <code>form</code> a jeho obsahem (formulářovými prvky). Nejužitečnější vlastností
+			formulářů je, že údaje uživatelem vyplněné je možné odeslat na server. Adresu, na kterou mají být data odeslána,
+			určuje atribut <code>action</code>. Mechanismus tohoto odeslání a následného zpracování je ovšem už nad rámec
+			tohoto kurzu (a HTML vůbec).
+		</p>
+		<p>
+			Formulářové prvky obvykle mají atribut <code>name</code>, jehož hodnota slouží jako klíč, pod kterým budou data
+			konkrétního prvku odeslána. Jedná se tedy o jakési pojmenování daného prvku. Formulářové prvky mohou ovšem stejně
+			jako jiné elementy obsahovat i atribut <code>id</code>, jenž rovněž slouží k pojmenování: tentokrát však spíše z
+			pohledu navázání na CSS nebo z hlediska použití elementu <code>label</code>.
+		</p>
+		<form action="adresa-pro-odeslani">
+			<fieldset>
+				<legend>Základní údaje</legend>
+				<table id="form-table">
+					<tr>
+						<td><label for="jmeno">Jméno</label></td>
+						<td><input type="text" name="jmeno" id="jmeno" /></td>
+					</tr>
+					<tr>
+						<td><label for="e-mail">E-mail</label></td>
+						<td><input type="email" name="e-mai" id="e-mail" /></td>
+					</tr>
+					<tr>
+						<td><label for="telefon">Telefon</label></td>
+						<td><input type="tel" name="telefon" id="telefon" /></td>
+					</tr>
+					<tr>
+						<td><label for="heslo">Heslo</label></td>
+						<td><input type="password" name="heslo" id="heslo" /></td>
+					</tr>
+					<tr>
+						<td><label for="datum">Datum</label></td>
+						<td><input type="date" name="datum" id="datum" /></td>
+					</tr>
+					<tr>
+						<td><label for="datum-a-cas">Datum a čas</label></td>
+						<td><input type="datetime-local" name="datum-a-cas" id="datum-a-cas" /></td>
+					</tr>
+					<tr>
+						<td><label for="vek">Věk</label></td>
+						<td><input type="number" name="vek" id="vek" /></td>
+					</tr>
+					<tr>
+						<td><label for="velikost-obleceni">Velikost oblečení</label></td>
+						<td><input type="range" min="1" max="5" name="velikost-obleceni" id="velikost-obleceni" /></td>
+					</tr>
+					<tr>
+						<td><label for="oblibena-barva">Oblíbená barva</label></td>
+						<td><input type="color" name="oblibena-barva" id="oblibena-barva" /></td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<label><input type="checkbox" name="soutez" /> Chci se zúčastnit soutěže</label>
+						</td>
+					</tr>
+					<tr>
+						<td>Oblíbené ovoce</td>
+						<td>
+							<label><input type="radio" name="oblibene-ovoce" value="jablko" /> Jablko</label>
+							<br /><label><input type="radio" name="oblibene-ovoce" value="banán" /> Banán</label> <br /><label
+								><input type="radio" name="oblibene-ovoce" value="hruška" /> Hruška</label
+							>
+							<br /><label><input type="radio" name="oblibene-ovoce" value="meruňka" /> Meruňka</label>
+						</td>
+					</tr>
+					<tr>
+						<td><label for="oblibena-zelenina">Oblíbená zelenina</label></td>
+						<td>
+							<select name="oblibena-zelenina" id="oblibena-zelenina">
+								<option value="mrkev">Mrkev</option>
+								<option value="paprika">Paprika</option>
+								<option value="okurka">Okurka</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td><label for="poznamky">Poznámky</label></td>
+						<td><textarea name="poznamky" id="poznamky"></textarea></td>
+					</tr>
+					<tr>
+						<td colspan="2"><button type="submit">Odeslat</button></td>
+					</tr>
+				</table>
+			</fieldset>
+		</form>
+
+		<!-- Lekce CSS 2 -->
+
+		<h1>ReactGirls: CSS 2</h1>
+
+		<section id="selektory">
+			<h2>Selektory</h2>
+
+			<p>
+				Dosud jsme si představili pouze úplně nejzákladnější selektory, a to takové, které vybírají všechny konkrétní
+				elementy nebo všechny elementy spadající do nějaké třídy nebo element s daným identifikátorem. Možnosti
+				selektorů jsou ale pochopitelně mnohem širší. Například můžeme použít několik selektorů oddělených čárkou.
+			</p>
+
+			<pre>
+h1, h2 { /* Následující vlastnosti budou použity jak pro nadpisy první úrovně, tak pro nadpisy druhé úrovně. */
+	font-family: serif;
+}
+		</pre
+			>
+
+			<p>
+				Velmi užitečné jsou tzv. kombinované selektory. Například selektor <code>article a</code> odpovídá všem odkazům,
+				které jsou uvnitř nějakého článku (tedy odkazů, které jsou mimo článek, se netýká). Platí to i pro situace, kdy
+				uvnitř článku je například element <code>p</code>, uvnitř něj <code>strong</code> a teprve uvnitř něj až samotný
+				element <code>a</code>. Pokud bychom chtěli vyjádřit, že nás zajímají pouze takové odkazy, které jsou přímo
+				součástí elementu <code>article</code> (ale ne už právě takové odkazy, které jsou hlouběji zanořené), zapsali
+				bychom to selektorem <code>article &gt; a</code>.
+			</p>
+
+			<p>
+				Můžeme cílit na elementy, které mají nastaven nějaký atribut. Například selektor <code>p[id]</code> znamená
+				všechny odstavce, které mají nastaven identifikátor (bez ohledu na jeho hodnotu, prostě nějaký mají). Můžeme
+				dokonce vybírat elementy, které mají v určitém atributu určitou hodnotu. Zápisem
+				<code>input[name="oblibene-ovoce"]</code> vybereme všechny elementy <code>input</code>, jejichž atribut
+				<code>name</code> má hodnotu <code>oblibene-ovoce</code>.
+			</p>
+
+			<p>
+				Vše předchozí (i později) zmíněné lze nejrůznějšími způsoby kombinovat, takže selektor
+				<code>p.uvod a[title]</code> vybírá takové odkazy, které mají uveden atribut <code>title</code> a které se
+				nacházejí v odstavcích patřících do třídy <code>uvod</code>.
+			</p>
+
+			<p>
+				Kromě tříd zavádí CSS rovněž pojem tzv. pseudotříd. Zápisem <code>a:hover</code> vybereme takový odkaz, nad
+				který uživatel zrovna umístil kurzor myši. Jinými slovy můžeme snadno třeba
+				<a href="https://reactgirls.com/">odkazu na web ReactGirls</a> změnit styl, když nad něj uživatel najede myší (a
+				naopak mu vrátit styl původní, když zase myší odjede pryč). Jinými příkladem pseudotřídy může být například
+				<code>input:focus</code> vybírající to formulářové políčko, které zrovna má tzv. focus, tedy je aktivováno a
+				uživatel do něj může zadat svůj vstup.
+			</p>
+
+			<p class="ozdobne">
+				Podobně jako existují pseudotřídy, existují i tzv. pseudoelementy. Za všechny uveďme jediný příklad: zápisem
+				<code>p::first-line</code> vybereme první řádek všech odstavců (jehož stylování následně můžeme ozvláštnit).
+			</p>
+		</section>
+
+		<section id="kaskada">
+			<h2>Kaskáda</h2>
+
+			<p>
+				Kaskáda vyjadřuje základní důležitost jednotlivých pravidel dle jejich původu. Mírně zjednodušené pořadí od
+				nejdůležitějších je následující:
+			</p>
+
+			<ol>
+				<li>Důležité (ve smyslu <code>!important</code>) deklarace definované prohlížečem.</li>
+				<li>Důležité deklarace definované uživatelem.</li>
+				<li>Důležité deklarace definované autorem webové stránky.</li>
+				<li>Normální deklarace definované autorem webové stránky.</li>
+				<li>Normální deklarace definované uživatelem.</li>
+				<li>Normální deklarace definované prohlížečem.</li>
+			</ol>
+		</section>
+
+		<section id="specificita">
+			<h2>Specificita selektorů</h2>
+
+			<p>
+				Jak prohlížeč postupuje ve chvíli, kdy pro stejný element CSS nabádá nastavit určitou vlastnost na základě
+				různých selektorů? Co když například řekneme, že všechny odstavce mají mít zelené písmo, všechny elementy se
+				třídou <code>pozor</code> mají mít červené písmo, a v textu budeme mít odstavec se třídou <code>pozor</code>?
+				Odpovědí je tzv. specificita jednotlivých selektorů. Vyjadřuje se jako trojciferné číslo, jehož cifry se
+				počítají následujícím způsobem.
+			</p>
+
+			<ul>
+				<li>Nejlevější cifra je počet identifikátorů v selektoru použitých.</li>
+				<li>Prostřední cifra je počet selektorů používajících třídy, atributy a pseudotřídy.</li>
+				<li>Nejpravější cifra je počet selektorů používajících elementy a pseudoelementy.</li>
+			</ul>
+
+			<p>
+				Například selektor <code>em</code> tedy má specificitu 001, selektor <code>p em</code> má specificitu 002,
+				selektor <code>.pozor</code> má specificitu 010, selektor <code>p.pozor</code> má specificitu 011 a selektor
+				<code>#specificita</code> má specificitu 100.
+			</p>
+
+			<p>
+				Hodnoty vlastností se poté aplikují od nejvyšší specificity selektorů pravidel, v rámci kterých se vyskytují. V
+				případě shody (pokud bychom například, nejspíš omylem, měli v CSS dvě sady pravidel pro všechny odstavce a v
+				obou sadách třeba nastavovali barvu textu) zvítězí hodnota vlastnosti nastavená <em>později</em>.
+			</p>
+		</section>
+
+		<section id="webove-fonty">
+			<h2>Webové fonty</h2>
+
+			<p>
+				Webové stránky mohou poskytnout svoje vlastní písma, kterými si přejí, aby byly zobrazeny. Tuto situaci
+				demonstruje následující ukázka.
+			</p>
+
+			<pre>
+@font-face {
+	font-family: Gentium; /* Definujeme písmo s názvem Gentium */
+	src: url(http://example.com/fonts/Gentium.woff); /* Určujeme adresu, na které se písmo nachází. */
+}
+p {
+	font-family: Gentium, serif; /* Písmo použijeme. */
+}
+			</pre
+			>
+
+			<p>Pro zjednodušení je možné použít i služby jako třeba <a href="https://fonts.google.com/">Google Fonts</a>.</p>
+		</section>
+
+		<section id="obtekani">
+			<h2>Obtékání</h2>
+
+			<p>
+				<img src="react-girls-logo-blue.png" alt="Logo ReactGirls" /> Pomocí vlastnosti <code>float</code> (a jejích
+				hodnot <code>left</code> nebo <code>right</code>) můžeme nechat nějaký element obtékat obsahem jiného. Například
+				tak můžeme nechat obrázek obtékat okolním textem.
+			</p>
+
+			<p>
+				Pokud je textu dostatek, bude pokračovat pod obtékaným obrázkem. Je ovšem potřeba pamatovat na to, že v opačném
+				případě bude obrázek obtékat i třeba text následujícího odstavce (nebo odstavců), což nemusí být vždy žádoucí. V
+				případě, že není, může nám pomoct vlastnost <code>clear</code>.
+			</p>
+		</section>
+
+		<section id="pozicovani">
+			<h2>Pozicování</h2>
+
+			<p>
+				Vlastností <code>position</code> můžeme elementu určit pozici odlišnou od té, na které byl vykreslen za
+				normálních okolností. Hodnota <code>absolute</code> tak například element umístí na konkrétní, absolutní
+				souřadnice vůči celé stránce. Tyto souřadnice určíme některými z vlastností <code>top</code>,
+				<code>right</code>, <code>bottom</code> nebo <code>left</code>.
+				<img src="react-girls-logo-blue.png" alt="Logo ReactGirls" id="pozicovani-logo-1" />
+			</p>
+
+			<p id="pozicovani-odstavec-2">
+				Hodnota <code>relative</code> způsobí posunutí elementu relativně vůči pozici, na které by byl vykreslen
+				původně.
+			</p>
+
+			<p>
+				Hodnota <code>fixed</code> má podobný efekt jako hodnota <code>absolute</code>, ovšem s tím rozdílem, že element
+				zůstává na daném místě obrazovky i při posunování stránky uživatelem. Hodnota <code>sticky</code> se chová
+				obdobně jako <code>relative</code>, ovšem s tím rozdílem, že pokud uživatel posouvá stránkou tak, že by element
+				přestal být viditelný, je jeho pozice zachována tak, aby zůstal být vidět.
+			</p>
+
+			<p>
+				Pokud je absolutně pozicovaný element uvnitř jiného elementu, který je rovněž například absolutně nebo relativně
+				pozicován, jeho souřadnice jsou uvažovány absolutně nikoliv vůči celé stránce, ale právě vůči onomu jinému
+				elementu.
+			</p>
+
+			<p>
+				Pro určení toho, jakým způsobem se vizuálně překrývají elementy s určeným pozicováním, slouží vlastnost
+				<code>z-index</code>.
+			</p>
+
+			<div id="pozicovani-obal">
+				<div id="pozicovani-vnitrni-ctverec-1"></div>
+				<div id="pozicovani-vnitrni-ctverec-2"></div>
+			</div>
+		</section>
+
+		<section id="media-queries">
+			<h2>Media queries</h2>
+
+			<p>
+				Pomocí tzv. media queries můžeme vytvořit různé styly pro různé druhy zobrazovacích zařízení. Například tak
+				můžeme určit speciální vzhled pro tisk jako v následující ukázce.
+			</p>
+
+			<pre>
+@media print { /* Obsažené styly jsou použity při tisku. */
+	body {
+		font-family: serif;
+		font-size: 12pt;
+	}
+}
+			</pre
+			>
+
+			<p>
+				Kromě druhu zobrazovacího zařízení můžeme klást i dodatečné podmínky. Například
+				<code>@media screen and (max-width: 50rem)</code> bude znamenat styly pro zařízení s obrazovkou, jejíž šířka je
+				ale maximálně 50 rem (tedy pro zařízení s větší obrazovkou nebudou tyto styly aplikovány).
+			</p>
+		</section>
+
+		<section id="flexbox">
+			<h2>Flexbox</h2>
+
+			<ul id="ovoce">
+				<li>Jablko</li>
+				<li>Banán</li>
+				<li>Hruška</li>
+				<li>Hroznové víno</li>
+				<li>Durian</li>
+			</ul>
+
+			<p><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Complete Guide to Flexbox</a></p>
+
+			<p><a href="galerie/galerie-flexbox.html">Jednoduchá galerie</a></p>
+		</section>
+
+		<section id="grid">
+			<h2>Grid</h2>
+
+			<p><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">A Complete Guide to CSS Grid</a></p>
+
+			<p><a href="galerie/galerie-grid.html">Jednoduchá galerie</a></p>
+		</section>
+	</body>
+</html>
