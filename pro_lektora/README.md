@@ -51,9 +51,8 @@ samostatné HTML soubory (ne nezbytně pro všechny, alespoň pro pár). Zárove
 souboru _povidani_o_pejskovi_a_kocicce/obsah.html_ (a naopak zpětné odkazy z povídek zpět na obsah). Jak by výsledek
 mohl vypadat, je vidět právě zde v souboru _povidani_o_pejskovi_a_kocicce/obsah.html_.
 
-_Domácí úkol:_ dokončení výše zmíněného cvičení tak, aby v jednotlivých HTML souborech byly všechny povídky a soubor
-_povidani_o_pejskovi_a_kocicce/obsah.html_ sloužil jako jednoduchý rozcestník. Není potřeba, aby účastnici tento úkol
-dokončili před druhou lekcí, ale bylo by dobré, aby jej měli zpracován před třetí lekcí.
+U domácího úkolu z této lekce není potřeba, aby jej účastníci dokončili před druhou lekcí, ale bylo by dobré, aby jej
+měli zpracován před třetí lekcí.
 
 ### CSS 1
 
@@ -70,11 +69,6 @@ vliv na vzhled celého dokumentu.
 Během lekce je vhodné představit vývojářské nástroje, a to jak z hlediska zobrazení DOMu (není potřeba zabíhat do
 detailů, stačí předvést, že pro náš dokument prohlížeč zobrazí v podstatě přesně to, co jsme do HTML souboru napsali),
 tak z hlediska CSS pravidel aplikovaných na jednotlivé elementy.
-
-Konkrétní domácí úkol z této lekce aktuálně neexistuje. Neformální doporučení zní doma samostatně experimentovat s
-představenými vlastnostmi (například zkusit si i další jejich hodnoty, o kterých nebyla řeč) a především si pohrát s
-box modelem, čili vlastnostmi _margin_, _border_, _padding_, _width_ a _height_. (V budoucnu můžeme vymyslet i
-konkrétnější zadání.)
 
 ### HTML 2
 
@@ -101,8 +95,8 @@ věci, které se do něj přidávají v páté lekci):
 - Pokud by se někdo z účastníků vyloženě nudil, může si o společnou navigaci rozšířit i jednotlivé články. Idea je opět
   k vidění v adresáři _noviny_.
 
-_Domácí úkol:_ dokončení výše zmíněného cvičení. Není potřeba, aby účastníci tento úkol dokončili před čtvrtou lekcí,
-ale bylo by dobré, aby jej měli zpracován před pátou lekcí.
+U domácího úkolu z této lekce není potřeba, aby jej účastníci dokončili před čtvrtou lekcí, ale bylo by dobré, aby jej
+měli zpracován před závěrečnou, pátou lekcí.
 
 ### CSS 2
 
