@@ -1,0 +1,124 @@
+/* --- Nastavení box-sizing bez bližšího komentáře --- */
+html {
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+/* --------------------------------------------------- */
+
+/* Lekce CSS 1 */
+
+/* Barvy */
+h2 {
+	color: aqua;
+	background-color: gray;
+}
+
+/* Velikost písma */
+h1 {
+	font-size: 300%;
+}
+h2 {
+	font-size: 200%;
+}
+
+/* Barvy */
+#barvy-polozka-1 {
+	color: blue;
+}
+#barvy-polozka-2 {
+	color: #dc143c;
+}
+#barvy-polozka-3 {
+	color: hsl(0, 100%, 50%);
+}
+
+/* Jednotky */
+#jednotky-polozka-1 {
+	font-size: 120%;
+}
+#jednotky-polozka-2 {
+	font-size: 1.2rem;
+}
+#jednotky-polozka-3 {
+	font-size: 32px;
+}
+
+/* Vlastnosti fontů */
+#vlastnosti-fontu-polozka-1 {
+	font-weight: bold;
+}
+#vlastnosti-fontu-polozka-2 {
+	font-style: italic;
+}
+#vlastnosti-fontu-polozka-3 {
+	font-weight: bold;
+	font-style: italic;
+}
+#vlastnosti-fontu-polozka-4 code {
+	font-family: "Tex Gyre Heros", sans-serif;
+}
+#vlastnosti-fontu-polozka-5 code {
+	font-family: "Tex Gyre Schola", serif;
+}
+#vlastnosti-fontu-polozka-6 code {
+	font-family: "Tex Gyre Cursor", monospace;
+}
+
+/* Zarovnání textu */
+#zarovnani-textu-1,
+#zarovnani-textu-2,
+#zarovnani-textu-3,
+#zarovnani-textu-4 {
+	width: 50%;
+}
+#zarovnani-textu-1 {
+	text-align: left;
+}
+#zarovnani-textu-2 {
+	text-align: right;
+}
+#zarovnani-textu-3 {
+	text-align: center;
+}
+#zarovnani-textu-4 {
+	text-align: justify;
+}
+
+/* Třídy */
+.dulezite {
+	font-weight: bold;
+	color: maroon;
+}
+
+/* Box model */
+#box-model-1 {
+	margin: 3rem 10rem 2rem 1rem;
+	border: 2px solid lime;
+	padding: 1rem;
+}
+#box-model-2 {
+	width: 50%;
+	margin-left: 4rem;
+	border: 3px dashed red;
+	padding: 2rem;
+}
+#box-model-3 {
+	width: 75%;
+	margin: 3rem auto;
+	border: 8px ridge lightgray;
+	padding: 0.5rem;
+}
+#box-model-logo-1 {
+	width: 100px;
+}
+#box-model-logo-2 {
+	height: 100px;
+}
+#box-model-logo-3 {
+	width: 200px;
+	height: 100px;
+}
