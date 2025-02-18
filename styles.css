@@ -122,3 +122,31 @@ h2 {
 	width: 200px;
 	height: 100px;
 }
+
+/* Lekce HTML 2 */
+
+/* Tabulky */
+table {
+	border: 2px solid black;
+}
+th {
+	border: 1px solid black;
+	padding: 0.5rem;
+}
+td {
+	border: 1px solid black;
+	padding: 0.5rem;
+}
+
+/* Formuláře */
+fieldset {
+	width: 50%;
+}
+#form-table {
+	width: 100%;
+	border: none;
+}
+#poznamky {
+	width: 100%;
+	height: 8rem;
+}
