@@ -4,6 +4,8 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="base.css" />
+		<link rel="stylesheet" href="index.css" />
 		<title>ReactGirls noviny</title>
 	</head>
 
@@ -19,77 +21,187 @@
 			</ul>
 		</nav>
 
-		<!-- Hlavní obsah -->
-		<main>
-			<h1 id="hlavni-zpravy">Hlavní zprávy</h1>
-			<article>
-				<img src="o_pejskovi_a_kocicce,_jak_si_myli_podlahu.jpeg" />
-				<h2>
-					<a href="o_pejskovi_a_kocicce,_jak_si_myli_podlahu.html"> O pejskovi a kočičce, jak si myli podlahu </a>
-				</h2>
-				<p>
-					To bylo tenkrát, když pejsek a kočička ještě spolu hospodařili; měli u lesa svůj malý domeček a tam spolu
-					bydleli a chtěli všechno dělat tak, jak to dělají velcí lidé. Ale oni to vždycky tak neuměli, protože mají
-					malé a nešikovné tlapičky a na těch tlapičkách nemají prsty, jako má člověk, jenom takové malé polštářky a na
-					nich drápky. A tak nemohli dělat všechno tak, jak to dělají lidé, a do školy nechodili, protože škola není pro
-					zvířátka, ba ne, to ne! Co myslíte? Ta je jen pro děti!
-				</p>
-				<p><a href="o_pejskovi_a_kocicce,_jak_si_myli_podlahu.html">Celý článek.</a></p>
-			</article>
-			<article>
-				<img src="jak_si_pejsek_s_kocickou_delali_k_svatku_dort.jpeg" />
-				<h2>
-					<a href="jak_si_pejsek_s_kocickou_delali_k_svatku_dort.html">
-						Jak si pejsek s kočičkou dělali k svátku dort
-					</a>
-				</h2>
-				<p>
-					Pejsek měl mít zítra svátek a kočička narozeniny. Děti to věděly a chtěly pejska a kočičku nějak k svátku a k
-					narozeninám překvapit. Přemýšlely, co by pejskovi a kočičce daly nebo udělaly; pak si vzpomněly a řekly: „Víte
-					co, děti? Uděláme pejskovi a kočičce k svátku dort!“
-				</p>
-				<p><a href="jak_si_pejsek_s_kocickou_delali_k_svatku_dort.html">Celý článek.</a></p>
-			</article>
+		<!-- Celkový obsah -->
+		<div class="content">
+			<!-- Hlavní obsah -->
+			<main>
+				<h1 id="hlavni-zpravy">Hlavní zprávy</h1>
+				<article>
+					<div class="article-image-container"><img src="o_pejskovi_a_kocicce,_jak_si_myli_podlahu.jpeg" /></div>
+					<div class="article-text-container">
+						<h2>
+							<a href="o_pejskovi_a_kocicce,_jak_si_myli_podlahu.html"> O pejskovi a kočičce, jak si myli podlahu </a>
+						</h2>
+						<p>
+							To bylo tenkrát, když pejsek a kočička ještě spolu hospodařili; měli u lesa svůj malý domeček a tam spolu
+							bydleli a chtěli všechno dělat tak, jak to dělají velcí lidé. Ale oni to vždycky tak neuměli, protože mají
+							malé a nešikovné tlapičky a na těch tlapičkách nemají prsty, jako má člověk, jenom takové malé polštářky a
+							na nich drápky. A tak nemohli dělat všechno tak, jak to dělají lidé, a do školy nechodili, protože škola
+							není pro zvířátka, ba ne, to ne! Co myslíte? Ta je jen pro děti!
+						</p>
+						<p><a href="o_pejskovi_a_kocicce,_jak_si_myli_podlahu.html">Celý článek.</a></p>
+					</div>
+				</article>
+				<article>
+					<div class="article-image-container"><img src="o_pysne_nocni_kosilce.jpeg" /></div>
+					<div class="article-text-container">
+						<h2><a href="o_pysne_nocni_kosilce.html">O pyšné noční košilce</a></h2>
+						<p>Považte, děti, co se pejskovi jednou stalo!</p>
+						<p><a href="o_pysne_nocni_kosilce.html">Celý článek.</a></p>
+					</div>
+				</article>
+				<article>
+					<div class="article-image-container"><img src="jak_si_pejsek_s_kocickou_delali_k_svatku_dort.jpeg" /></div>
+					<div class="article-text-container">
+						<h2>
+							<a href="jak_si_pejsek_s_kocickou_delali_k_svatku_dort.html">
+								Jak si pejsek s kočičkou dělali k svátku dort
+							</a>
+						</h2>
+						<p>
+							Pejsek měl mít zítra svátek a kočička narozeniny. Děti to věděly a chtěly pejska a kočičku nějak k svátku
+							a k narozeninám překvapit. Přemýšlely, co by pejskovi a kočičce daly nebo udělaly; pak si vzpomněly a
+							řekly: „Víte co, děti? Uděláme pejskovi a kočičce k svátku dort!“
+						</p>
+						<p><a href="jak_si_pejsek_s_kocickou_delali_k_svatku_dort.html">Celý článek.</a></p>
+					</div>
+				</article>
 
-			<h1 id="z-domova">Z domova</h1>
-			<article>
-				<img src="o_pejskovi_a_kocicce,_jak_psali_psani_devcatum_do_nymburka.jpeg" />
-				<h2>
-					<a href="o_pejskovi_a_kocicce,_jak_psali_psani_devcatum_do_nymburka.html">
-						O pejskovi a kočičce, jak psali psaní děvčatům do Nymburka
-					</a>
-				</h2>
-				<p>
-					Bylo to zrovna tak někdy v lednu, leželi pejsek s kočičkou každý ve své postýlce a povídali si o zimě. „Nějak
-					se mně ani nechce z té teplé postele ven,“ povídá pejsek, „já mám zimu rád, zvlášť když je takhle dost sněhu,
-					ale nesmí být ta zima tuze moc veliká. Já nevím, jestli se ti to také někdy stane, ale když mně vleze sníh
-					mezi prsty a já ho mám potom plné tlapičky, to je tuze nepříjemné. To ti tak tuze zebe –“
-				</p>
-				<p><a href="o_pejskovi_a_kocicce,_jak_psali_psani_devcatum_do_nymburka.html">Celý článek.</a></p>
-			</article>
+				<h1 id="z-domova">Z domova</h1>
+				<article>
+					<div class="article-image-container">
+						<img src="o_pejskovi_a_kocicce,_jak_psali_psani_devcatum_do_nymburka.jpeg" />
+					</div>
+					<div class="article-text-container">
+						<h2>
+							<a href="o_pejskovi_a_kocicce,_jak_psali_psani_devcatum_do_nymburka.html">
+								O pejskovi a kočičce, jak psali psaní děvčatům do Nymburka
+							</a>
+						</h2>
+						<p>
+							Bylo to zrovna tak někdy v lednu, leželi pejsek s kočičkou každý ve své postýlce a povídali si o zimě.
+							„Nějak se mně ani nechce z té teplé postele ven,“ povídá pejsek, „já mám zimu rád, zvlášť když je takhle
+							dost sněhu, ale nesmí být ta zima tuze moc veliká. Já nevím, jestli se ti to také někdy stane, ale když
+							mně vleze sníh mezi prsty a já ho mám potom plné tlapičky, to je tuze nepříjemné. To ti tak tuze zebe –“
+						</p>
+						<p><a href="o_pejskovi_a_kocicce,_jak_psali_psani_devcatum_do_nymburka.html">Celý článek.</a></p>
+					</div>
+				</article>
+				<article>
+					<div class="article-image-container"><img src="o_klucich_z_domazlic.jpeg" /></div>
+					<div class="article-text-container">
+						<h2><a href="o_klucich_z_domazlic.html">O klucích z Domažlic</a></h2>
+						<p>
+							Pejsek s kočičkou seděli na pohovce a vymýšleli si, co by měli dělat, aby se pobavili a dobře se měli.
+							Někdo zaklepal, oni řekli „dále“ a vešel pan Čapek.
+						</p>
+						<p><a href="o_klucich_z_domazlic.html">Celý článek.</a></p>
+					</div>
+				</article>
+				<article>
+					<div class="article-image-container"><img src="jak_nasli_panenku,_ktera_tence_plakala.jpeg" /></div>
+					<div class="article-text-container">
+						<h2>
+							<a href="jak_nasli_panenku,_ktera_tence_plakala.html">Jak našli panenku, která tence plakala</a>
+						</h2>
+						<p>
+							Jednou celý den pršelo, všude bylo mokro a studeno a pejsek s ko­čičkou nemohli ven a neměli co dělat. A
+							tak si povídali.
+						</p>
+						<p><a href="jak_nasli_panenku,_ktera_tence_plakala.html">Celý článek.</a></p>
+					</div>
+				</article>
 
-			<h1 id="sport">Sport</h1>
-			<article></article>
+				<h1 id="sport">Sport</h1>
+				<article>
+					<div class="article-image-container"><img src="jak_si_pejsek_roztrhl_katata.jpeg" /></div>
+					<div class="article-text-container">
+						<h2><a href="jak_si_pejsek_roztrhl_katata.html">Jak si pejsek roztrhl kaťata</a></h2>
+						<p>
+							Když ještě pejsek a kočička spolu hospodařili (však jsme o tom tuhle vypravovali, jak si šikovně umyli
+							podlahu a jak se potom oba na slunci sušili) a měli ještě svůj domeček a vedli si v něm své hospodářství,
+							byla jednou velikonoční neděle, a tak si řekli, že půjdou spolu na výlet. Sluníčko pěkně svítilo. „Půjdeme
+							třeba do lesa,“ povídá pejsek, „kampak jinam bychom šli, když je tak hezky?“
+						</p>
+						<p><a href="jak_si_pejsek_roztrhl_katata.html">Celý článek.</a></p>
+					</div>
+				</article>
 
-			<h1 id="kultura">Kultura</h1>
-			<article></article>
+				<h1 id="kultura">Kultura</h1>
+				<article>
+					<div class="article-image-container"><img src="jak_hrali_divadlo_a_na_mikulase_co_bylo.jpeg" /></div>
+					<div class="article-text-container">
+						<h2>
+							<a href="jak_hrali_divadlo_a_na_mikulase_co_bylo.html"> Jak hráli divadlo a na Mikuláše co bylo </a>
+						</h2>
+						<p>Pejsek s kočičkou si chtěli venku zahrát s dětmi, ale žádné děti venku nebyly.</p>
+						<p><a href="jak_hrali_divadlo_a_na_mikulase_co_bylo.html">Celý článek.</a></p>
+					</div>
+				</article>
 
-			<h1 id="zabava">Zábava</h1>
-			<article></article>
-		</main>
+				<h1 id="zabava">Zábava</h1>
+				<article>
+					<div class="article-image-container"><img src="jak_pejsek_s_kocickou_slavili_28._rijen.jpeg" /></div>
+					<div class="article-text-container">
+						<h2>
+							<a href="jak_pejsek_s_kocickou_slavili_28._rijen.html"> Jak pejsek s kočičkou slavili 28. říjen </a>
+						</h2>
+						<p>
+							Kočička a pejsek seděli spolu ve svém domečku a povídali si. „Poslouchej, kočičko,“ řekl pejsek, „už bude
+							brzo 28. října, a my nemáme žádný prapor. A letos prý to bude nějaké obzvlášť slavné. Byla by to ostuda,
+							kdyby na každém domě byl prapor a u nás nic.“ „Copak o to,“ povídá kočička, „prapory, to se mně líbí.“ „No
+							ba,“ řekl pejsek, „ono to krásně vypadá, když se prapory ve větru třepetají; když se tak člověk koukne na
+							ně odzdola, vypadá to, jako kdyby jich bylo plné nebe.“ „A copak teprve shora, to bys, panečku, koukal,“
+							vykládala mu kočička; „není nad to, projít se takhle po střeše, když jsou prapory. Je to procházka zdravá
+							a zábavná. Ze střechy to vypadá, jako kdyby byla zas praporů plná země.“ „To každý nemůže, procházet se
+							tak po střeše jako ty,“ odpověděl kočičce pejsek; „já, například, bych se bál vlézt na střechu, protože
+							bych spad a mohl bych ses při tom zabít. – Ale nějaký prapor musíme mít, málo platné, když bude ten slavný
+							28. říjen.“
+						</p>
+						<p><a href="jak_pejsek_s_kocickou_slavili_28._rijen.html">Celý článek.</a></p>
+					</div>
+				</article>
+				<article>
+					<div class="article-image-container"><img src="jak_to_bylo_na_vanoce.jpeg" /></div>
+					<div class="article-text-container">
+						<h2><a href="jak_to_bylo_na_vanoce.html">Jak to bylo na Vánoce</a></h2>
+						<p>
+							„Heč,“ povídala kočička pejskovi, „já něco vím.“ – „A copak?“ divil se pejsek. „Heč,“ povídá kočička, „já
+							vím, že pan Čapek má napsat na Vánoce nějaké povídání pro ty malé děti, zase něco o nás, o kočičce a
+							pejskovi.“ – „Hehe,“ těšil se pejsek, „ale jen aby to tam o mne pěkně napsal!“ – „Ba ne,“ řekla kočička,
+							„on nemůže na nic připadnout, sedí u toho stolu, pořád přemýšlí, a pořád neví, co by napsal. Sedí a sedí,
+							a pořád nic.“ – „To je chyba,“ prohlásil pejsek, „pak ho třeba nic správného nenapadne a napíše o nás
+							nějaké hlouposti.“ – „No, právě,“ povídala kočička, „taky mám z toho trochu strach. Měli bychom mu něco
+							poradit. Mně ani není tak o toho pana Čapka, ale o ty děti, co jim to budou číst.“
+						</p>
+						<p><a href="jak_to_bylo_na_vanoce.html">Celý článek.</a></p>
+					</div>
+				</article>
+			</main>
 
-		<!-- Boční obsah -->
-		<aside>
-			<h2>Nejčtenější</h2>
-			<article>
-				<img src="jak_si_pejsek_s_kocickou_delali_k_svatku_dort.jpeg" />
-				<h3>
-					<a href="jak_si_pejsek_s_kocickou_delali_k_svatku_dort.html">
-						Jak si pejsek s kočičkou dělali k svátku dort
-					</a>
-				</h3>
-			</article>
-		</aside>
+			<!-- Boční obsah -->
+			<aside>
+				<h2>Nejčtenější</h2>
+				<article>
+					<img src="jak_si_pejsek_s_kocickou_delali_k_svatku_dort.jpeg" />
+					<h3>
+						<a href="jak_si_pejsek_s_kocickou_delali_k_svatku_dort.html">
+							Jak si pejsek s kočičkou dělali k svátku dort
+						</a>
+					</h3>
+				</article>
+				<article>
+					<img src="jak_si_pejsek_roztrhl_katata.jpeg" />
+					<h3><a href="jak_si_pejsek_roztrhl_katata.html">Jak si pejsek roztrhl kaťata</a></h3>
+				</article>
+				<article>
+					<img src="jak_hrali_divadlo_a_na_mikulase_co_bylo.jpeg" />
+					<h3>
+						<a href="jak_hrali_divadlo_a_na_mikulase_co_bylo.html">Jak hráli divadlo a na Mikuláše co bylo</a>
+					</h3>
+				</article>
+			</aside>
+		</div>
 
 		<!-- Patička -->
 		<footer>© ReactGirls 2025</footer>
